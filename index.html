@@ -11,20 +11,16 @@
 <body>
     <h1>Solo Tree Community</h1>
 
-    <!-- Scroll Down Indicator -->
-    <div class="scroll-down">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-
     <div class="container">
-        <div class="card">
+        <!-- Card for Solo Tree Owner -->
+        <div class="card" onclick="toggleSocial(this)">
             <figure>
-                <img src="./images/IMG01.jpg" alt="Profile image" data-original="./images/IMG01.jpg" data-alt="./images/IMG01-alt.jpg">
+                <img src="./images/IMG01.jpg" alt="Profile image">
             </figure>
             <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
             <p class="role">Solo Tree Owner</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/ilakshu" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -34,14 +30,15 @@
             </div>
         </div>
 
-        <div class="card">
+        <!-- Card for Co-Owner -->
+        <div class="card" onclick="toggleSocial(this)">
             <figure>
-                <img src="./images/IMG02.jpg" alt="Profile image" data-original="./images/IMG02.jpg" data-alt="./images/IMG02-alt.jpg">
+                <img src="./images/IMG02.jpg" alt="Profile image">
             </figure>
             <p class="name">℘αηɉυ ɱιттαι</p>
             <p class="role">Co - Owner</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/littlevaayadi" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -51,14 +48,15 @@
             </div>
         </div>
 
-        <div class="card">
+        <!-- Card for Sponsor -->
+        <div class="card" onclick="toggleSocial(this)">
             <figure>
-                <img src="./images/IMG03.jpg" alt="Profile image" data-original="./images/IMG03.jpg" data-alt="./images/IMG03-alt.jpg">
+                <img src="./images/IMG03.jpg" alt="Profile image">
             </figure>
             <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
             <p class="role">Sponsor</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/Simba_itsme" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -68,14 +66,15 @@
             </div>
         </div>
 
-        <div class="card">
+        <!-- Card for Backend Developer -->
+        <div class="card" onclick="toggleSocial(this)">
             <figure>
-                <img src="./images/IMG04.jpg" alt="Profile image" data-original="./images/IMG04.jpg" data-alt="./images/IMG04-alt.jpg">
+                <img src="./images/IMG04.jpg" alt="Profile image">
             </figure>
             <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
             <p class="role">Backend Dev</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/CosmicSoulRay" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -102,22 +101,23 @@
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > lastScrollY) {
-                // Scrolling down, hide the header
                 header.classList.add('hide');
             } else {
-                // Scrolling up, show the header
                 header.classList.remove('hide');
             }
             lastScrollY = window.scrollY;
         });
 
-        // Scroll down indicator behavior
-        document.querySelector('.scroll-down').addEventListener('click', () => {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        });
+        // Function to toggle the visibility of the social container
+        function toggleSocial(card) {
+            const socialContainer = card.querySelector('.social-container');
+            socialContainer.classList.toggle('hidden');
+
+            // Hide after 3 seconds
+            setTimeout(() => {
+                socialContainer.classList.add('hidden');
+            }, 3000);
+        }
     </script>
 </body>
 </html>

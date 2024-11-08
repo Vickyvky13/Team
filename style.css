@@ -27,14 +27,14 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     grid-template-rows: repeat(2, auto);   /* Two rows */
-    gap: 30px; /* Space between cards */
+    gap: 22px; /* Space between cards */
     align-items: center;
     justify-items: center;
 }
 
 .card {
     width           : 180px;
-    height          : 300px;
+    height          : 350px;
     background-color: #1a1720;
     border-radius   : 12px;
     box-shadow      : 0px 4px 24px rgba(0, 0, 0, 0.6);

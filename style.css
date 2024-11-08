@@ -100,11 +100,6 @@ figure img {
     transition: 0.4s;
 }
 
-.social-container,
-.additional-text {
-    display: none;
-}
-
 .social-container.hidden,
 .additional-text.hidden {
     display: none;

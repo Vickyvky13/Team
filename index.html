@@ -14,7 +14,7 @@
     <div class="container">
         <div class="card">
             <figure>
-                <img src="./images/IMG01.jpg" alt="Profile image">
+                <img src="./images/IMG01.jpg" alt="Profile image" data-original="./images/IMG01.jpg" data-alt="./images/IMG01-alt.jpg">
             </figure>
             <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
             <p class="role">Solo Tree Owner</p>
@@ -31,7 +31,7 @@
 
         <div class="card">
             <figure>
-                <img src="./images/IMG02.jpg" alt="Profile image">
+                <img src="./images/IMG02.jpg" alt="Profile image" data-original="./images/IMG02.jpg" data-alt="./images/IMG02-alt.jpg">
             </figure>
             <p class="name">℘αηɉυ ɱιттαι</p>
             <p class="role">Co - Owner</p>
@@ -48,7 +48,7 @@
 
         <div class="card">
             <figure>
-                <img src="./images/IMG03.jpg" alt="Profile image">
+                <img src="./images/IMG03.jpg" alt="Profile image" data-original="./images/IMG03.jpg" data-alt="./images/IMG03-alt.jpg">
             </figure>
             <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
             <p class="role">Sponsor</p>
@@ -65,7 +65,7 @@
 
         <div class="card">
             <figure>
-                <img src="./images/IMG04.jpg" alt="Profile image">
+                <img src="./images/IMG04.jpg" alt="Profile image" data-original="./images/IMG04.jpg" data-alt="./images/IMG04-alt.jpg">
             </figure>
             <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
             <p class="role">Backend Dev</p>
@@ -90,11 +90,11 @@
                 card.addEventListener('click', function() {
                     const figure = card.querySelector('figure img');
                     const currentImage = figure.src;
-                    
-                    const newImage = currentImage.includes('IMG01.jpg') ? './images/img1.jpg' :
-                                     currentImage.includes('IMG02.jpg') ? './images/IMG02-alt.jpg' :
-                                     currentImage.includes('IMG03.jpg') ? './images/IMG03-alt.jpg' :
-                                     currentImage.includes('IMG04.jpg') ? './images/IMG04-alt.jpg' : currentImage;
+
+                    const originalImage = figure.getAttribute('data-original');
+                    const newImage = currentImage === originalImage 
+                        ? figure.getAttribute('data-alt') 
+                        : originalImage;
 
                     figure.src = newImage;
                 });

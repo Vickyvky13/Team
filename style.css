@@ -59,14 +59,16 @@ figure {
     background: linear-gradient(to top, #009ad9, #ffba00);
 }
 
+/* Default grayscale filter */
 figure img {
     width: 100%;
-    transition: 0.4s;
+    filter: grayscale(100%);
+    transition: filter 0.4s;
 }
 
-/* Add grayscale effect on hover */
+/* Remove grayscale on hover (or touch) */
 .card:hover figure img {
-    filter: grayscale(100%);
+    filter: grayscale(0%);
 }
 
 .name {

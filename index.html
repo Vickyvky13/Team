@@ -12,7 +12,6 @@
     <h1>Solo Tree Community</h1>
 
     <div class="container">
-        <!-- Card for Solo Tree Owner -->
         <div class="card" onclick="toggleSocial(this)">
             <figure>
                 <img src="./images/IMG01.jpg" alt="Profile image">
@@ -20,7 +19,7 @@
             <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
             <p class="role">Solo Tree Owner</p>
             <div class="separator"></div>
-            <div class="social-container hidden">
+            <div class="social-container">
                 <a href="https://t.me/ilakshu" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -30,7 +29,6 @@
             </div>
         </div>
 
-        <!-- Card for Co-Owner -->
         <div class="card" onclick="toggleSocial(this)">
             <figure>
                 <img src="./images/IMG02.jpg" alt="Profile image">
@@ -38,7 +36,7 @@
             <p class="name">℘αηɉυ ɱιттαι</p>
             <p class="role">Co - Owner</p>
             <div class="separator"></div>
-            <div class="social-container hidden">
+            <div class="social-container">
                 <a href="https://t.me/littlevaayadi" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -48,7 +46,6 @@
             </div>
         </div>
 
-        <!-- Card for Sponsor -->
         <div class="card" onclick="toggleSocial(this)">
             <figure>
                 <img src="./images/IMG03.jpg" alt="Profile image">
@@ -56,7 +53,7 @@
             <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
             <p class="role">Sponsor</p>
             <div class="separator"></div>
-            <div class="social-container hidden">
+            <div class="social-container">
                 <a href="https://t.me/Simba_itsme" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -66,7 +63,6 @@
             </div>
         </div>
 
-        <!-- Card for Backend Developer -->
         <div class="card" onclick="toggleSocial(this)">
             <figure>
                 <img src="./images/IMG04.jpg" alt="Profile image">
@@ -74,7 +70,7 @@
             <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
             <p class="role">Backend Dev</p>
             <div class="separator"></div>
-            <div class="social-container hidden">
+            <div class="social-container">
                 <a href="https://t.me/CosmicSoulRay" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -101,22 +97,18 @@
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > lastScrollY) {
+                // Scrolling down, hide the header
                 header.classList.add('hide');
             } else {
+                // Scrolling up, show the header
                 header.classList.remove('hide');
             }
             lastScrollY = window.scrollY;
         });
 
-        // Function to toggle the visibility of the social container
+        // Toggle social links on card click
         function toggleSocial(card) {
-            const socialContainer = card.querySelector('.social-container');
-            socialContainer.classList.toggle('hidden');
-
-            // Hide after 3 seconds
-            setTimeout(() => {
-                socialContainer.classList.add('hidden');
-            }, 3000);
+            card.classList.toggle('show-social');
         }
     </script>
 </body>

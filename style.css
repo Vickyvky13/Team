@@ -40,7 +40,7 @@ h1 {
 /* Class to hide the header */
 h1.hide {
     opacity: 0;
-    pointer-events: none; /* To prevent interaction when hidden */
+    pointer-events: none;
 }
 
 /* Footer Styling */
@@ -84,11 +84,11 @@ footer {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout for vertical display */
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     align-items: center;
     justify-items: center;
-    padding-top: 80px; /* Add padding to make space for the fixed header */
+    padding-top: 80px;
 }
 
 .card {
@@ -172,12 +172,13 @@ figure img {
 /* Social Container Styling */
 .social-container {
     margin-top: 10px;
-    display: none; /* Initially hidden */
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
-/* Show social container when card is clicked */
-.card.show-social .social-container {
-    display: block;
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 button {

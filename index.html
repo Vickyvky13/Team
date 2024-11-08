@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Sᴏʟᴏ ᴛʀᴇᴇ</title>
+    <title>Solo Tree Community</title>
 </head>
 <body>
-    <h1 style="position: fixed; top: 20px; z-index: 1;">Solo Tree Community</h1>
+    <h1>Solo Tree Community</h1>
 
-    <div class="container" style="margin-top: 80px;">
+    <div class="container">
         <div class="card">
             <figure>
                 <img src="./images/IMG01.jpg" alt="Profile image" data-original="./images/IMG01.jpg" data-alt="./images/IMG01-alt.jpg">
@@ -92,41 +92,18 @@
 
     <!-- Add the script at the end of the body -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cards = document.querySelectorAll('.card');
+        const header = document.querySelector('h1');
+        let lastScrollY = window.scrollY;
 
-            cards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const figure = card.querySelector('figure img');
-                    const currentImage = figure.src;
-
-                    // Get the original and alternate image paths from the data attributes
-                    const originalImage = figure.getAttribute('data-original');
-                    const alternateImage = figure.getAttribute('data-alt');
-
-                    // Toggle between the original and alternate image
-                    if (currentImage === originalImage) {
-                        figure.src = alternateImage; // Change to alternate image
-                    } else {
-                        figure.src = originalImage; // Revert back to original image
-                    }
-                });
-            });
-
-            // Show footer on scroll
-            let scrollTimeout;
-            window.addEventListener("scroll", function() {
-                const footer = document.querySelector("footer");
-                footer.classList.add("visible");
-
-                // Clear previous timeout
-                clearTimeout(scrollTimeout);
-
-                // Hide footer after 2 seconds of inactivity
-                scrollTimeout = setTimeout(() => {
-                    footer.classList.remove("visible");
-                }, 2000);
-            });
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                // Scrolling down, hide the header
+                header.classList.add('hide');
+            } else {
+                // Scrolling up, show the header
+                header.classList.remove('hide');
+            }
+            lastScrollY = window.scrollY;
         });
     </script>
 </body>

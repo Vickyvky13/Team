@@ -12,14 +12,15 @@
     <h1>Solo Tree Community</h1>
 
     <div class="container">
-        <div class="card">
-            <figure>
+        <!-- Card 1 -->
+        <div class="card" onclick="toggleContent(this)">
+            <figure class="image-container">
                 <img src="./images/IMG01.jpg" alt="Profile image">
             </figure>
             <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
             <p class="role">Solo Tree Owner</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/ilakshu" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -27,16 +28,18 @@
                     </button>
                 </a>
             </div>
+            <p class="additional-text hidden">Additional Text on Click</p>
         </div>
 
-        <div class="card">
-            <figure>
+        <!-- Card 2 -->
+        <div class="card" onclick="toggleContent(this)">
+            <figure class="image-container">
                 <img src="./images/IMG02.jpg" alt="Profile image">
             </figure>
             <p class="name">℘αηɉυ ɱιттαι</p>
             <p class="role">Co - Owner</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/littlevaayadi" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -44,18 +47,18 @@
                     </button>
                 </a>
             </div>
+            <p class="additional-text hidden">Additional Text on Click</p>
         </div>
 
-
-
-        <div class="card">
-            <figure>
+        <!-- Card 3 -->
+        <div class="card" onclick="toggleContent(this)">
+            <figure class="image-container">
                 <img src="./images/IMG03.jpg" alt="Profile image">
             </figure>
             <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
             <p class="role">Sponsor</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/Simba_itsme" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -63,18 +66,18 @@
                     </button>
                 </a>
             </div>
+            <p class="additional-text hidden">Additional Text on Click</p>
         </div>
 
-
-
-        <div class="card">
-            <figure>
+        <!-- Card 4 -->
+        <div class="card" onclick="toggleContent(this)">
+            <figure class="image-container">
                 <img src="./images/IMG04.jpg" alt="Profile image">
             </figure>
             <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
             <p class="role">Backend Dev</p>
             <div class="separator"></div>
-            <div class="social-container">
+            <div class="social-container hidden">
                 <a href="https://t.me/CosmicSoulRay" target="_blank">
                     <button>
                         <i class="fab fa-telegram-plane"></i>
@@ -82,9 +85,19 @@
                     </button>
                 </a>
             </div>
+            <p class="additional-text hidden">Additional Text on Click</p>
         </div>
-
-        <!-- Add more cards as needed -->
     </div>
+
+    <script>
+        function toggleContent(card) {
+            const imageContainer = card.querySelector('.image-container');
+            const socialContainer = card.querySelector('.social-container');
+            const additionalText = card.querySelector('.additional-text');
+            imageContainer.classList.toggle('hidden');
+            socialContainer.classList.toggle('hidden');
+            additionalText.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>

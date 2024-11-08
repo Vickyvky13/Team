@@ -13,9 +13,10 @@ body {
     background: linear-gradient(135deg, #4d3664, #bab5f6);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Fixed Header Styling */
@@ -30,145 +31,16 @@ h1 {
     text-align: center;
     position: fixed;
     top: 0;
-    background: rgba(26, 23, 32, 0.8); /* Optional background to enhance visibility */
+    background: rgba(26, 23, 32, 0.8);
     z-index: 2;
-}
-
-/* Adjusted Container Styling */
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 22px;
-    width: 100%;
-    padding: 20px;
-    margin-top: 80px; /* Space below the fixed header */
-}
-
-/* Card Styling */
-.card {
-    width: 100%;
-    max-width: 200px;
-    height: 320px;
-    background-color: rgba(26, 23, 32, 0.7);
-    border-radius: 12px;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    opacity: 0.7;
-    margin: auto;
-}
-
-.card:hover {
-    transform: translateY(-15px);
-    background-color: #1a1720;
     opacity: 1;
-    transition: 0.4s;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.card:hover * {
-    color: #fff;
-}
-
-/* Profile Image Styling */
-figure {
-    position: relative;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #009ad9, #ffba00);
-}
-
-figure img {
-    width: 100%;
-    filter: grayscale(100%);
-    transition: filter 0.4s;
-}
-
-.card:hover figure img {
-    filter: grayscale(0%);
-}
-
-/* Card Text Styling */
-.name {
-    font-size: 1.1em;
-    margin-bottom: 8px;
-}
-
-.role {
-    text-transform: uppercase;
-    font-size: 0.8em;
-}
-
-/* Separator Styling */
-.separator {
-    margin: 16px;
-    height: 5px;
-    width: 60px;
-    background-color: #2e3033;
-    position: relative;
-    transition: 0.4s;
-}
-
-.card:hover .separator::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #009ad9, #ffba00);
-    animation: widthAnimation 0.3s;
-}
-
-@keyframes widthAnimation {
-    from {
-        width: 0px;
-    }
-    to {
-        width: 60px;
-    }
-}
-
-/* Social Container Styling */
-.social-container {
-    display: none;
-}
-
-.card:hover .social-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-container a button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 15px;
-    background-color: #0088cc;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
-
-.social-container a button:hover {
-    background-color: #006699;
-}
-
-.social-container a button i {
-    font-size: 16px;
-    margin-right: 8px;
+/* Class to hide the header */
+h1.hide {
+    opacity: 0;
+    pointer-events: none; /* To prevent interaction when hidden */
 }
 
 /* Footer Styling */
@@ -196,18 +68,7 @@ footer {
     color: #ffffff;
 }
 
-/* Footer Visibility on Scroll */
-footer.visible {
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-
-footer:not(.visible) {
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-/* Tree Background Effect */
+/* Tree background effect */
 .tree {
     position: absolute;
     bottom: 0;
@@ -220,3 +81,88 @@ footer:not(.visible) {
     opacity: 0.15;
     z-index: -1;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 80px; /* Add padding to make space for the fixed header */
+}
+
+.card {
+    width: 180px;
+    height: 320px;
+    background-color: rgba(26, 23, 32, 0.7);
+    border-radius: 12px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    opacity: 0.7;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    background-color: #1a1720;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.card:hover * {
+    color: #fff;
+}
+
+figure {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #009ad9, #ffba00);
+}
+
+figure img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.4s;
+}
+
+.card:hover figure img {
+    filter: grayscale(0%);
+}
+
+.name {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.role {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.separator {
+    margin: 16px;
+    height: 5px;
+    width: 60px;
+    background-color: #2e3033;
+    position: relative;
+    transition: 0.4s;
+}
+
+.card:hover .separator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #009ad9

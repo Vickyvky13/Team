@@ -47,6 +47,7 @@ h1 {
     align-items: center;
     transition: background-color 0.4s, transform 0.4s;
     cursor: pointer;
+    position: relative;
 }
 
 .card:hover {
@@ -56,6 +57,10 @@ h1 {
 
 .card:hover * {
     color: #fff;
+}
+
+.hidden {
+    display: none;
 }
 
 figure.image-container {
@@ -100,9 +105,12 @@ figure img {
     transition: 0.4s;
 }
 
-.social-container.hidden,
-.additional-text.hidden {
-    display: none;
+.social-container {
+    position: absolute;
+    top: 10px; /* Position Telegram button at the top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-container a button {
@@ -146,9 +154,4 @@ figure img {
     to {
         width: 60px;
     }
-}
-
-/* Hidden class to toggle visibility */
-.hidden {
-    display: none;
 }

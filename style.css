@@ -55,21 +55,12 @@ h1 {
     transform: translateY(-15px);
 }
 
-.card:hover * {
-    color: #fff;
-}
-
-.hidden {
-    display: none;
-}
-
 figure.image-container {
     position: relative;
     width: 110px;
     height: 110px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,28 +77,23 @@ figure img {
     filter: grayscale(0%);
 }
 
-.name {
+.hidden {
+    display: none;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-text {
     font-size: 1.1em;
-    margin-bottom: 8px;
-}
-
-.role {
-    text-transform: uppercase;
-    font-size: 0.8em;
-}
-
-.separator {
-    margin: 16px;
-    height: 5px;
-    width: 60px;
-    background-color: #2e3033;
-    position: relative;
-    transition: 0.4s;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .social-container {
-    position: absolute;
-    top: 10px; /* Position Telegram button at the top */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,24 +120,4 @@ figure img {
 .social-container a button i {
     font-size: 16px;
     margin-right: 8px;
-}
-
-.card:hover .separator::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #009ad9, #ffba00);
-    animation: widthAnimation 2s;
-}
-
-@keyframes widthAnimation {
-    from {
-        width: 0px;
-    }
-    to {
-        width: 60px;
-    }
 }

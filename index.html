@@ -80,5 +80,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Add the script at the end of the body -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const figure = card.querySelector('figure img');
+                    const currentImage = figure.src;
+                    
+                    const newImage = currentImage.includes('IMG01.jpg') ? './images/IMG01-alt.jpg' :
+                                     currentImage.includes('IMG02.jpg') ? './images/IMG02-alt.jpg' :
+                                     currentImage.includes('IMG03.jpg') ? './images/IMG03-alt.jpg' :
+                                     currentImage.includes('IMG04.jpg') ? './images/IMG04-alt.jpg' : currentImage;
+
+                    figure.src = newImage;
+                });
+            });
+        });
+    </script>
 </body>
 </html>

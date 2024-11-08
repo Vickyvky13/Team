@@ -109,7 +109,7 @@ footer {
     transform: translateY(-15px);
     background-color: #1a1720;
     opacity: 1;
-    transition: 3.9s;
+    transition: 0.9s;
 }
 
 .card:hover * {

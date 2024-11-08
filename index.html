@@ -112,6 +112,21 @@
                     }
                 });
             });
+
+            // Show footer on scroll
+            let scrollTimeout;
+            window.addEventListener("scroll", function() {
+                const footer = document.querySelector("footer");
+                footer.classList.add("visible");
+
+                // Clear previous timeout
+                clearTimeout(scrollTimeout);
+
+                // Hide footer after 2 seconds of inactivity
+                scrollTimeout = setTimeout(() => {
+                    footer.classList.remove("visible");
+                }, 2000);
+            });
         });
     </script>
 </body>

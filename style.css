@@ -10,7 +10,7 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient (#4d3664, #bab5f6); /* Smooth gradient for a calming effect */
+    background: linear-gradient(#4d3664, #bab5f6); /* Smooth gradient for a calming effect */
     display: flex;
     flex-direction: column;
     justify-content: center;

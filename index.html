@@ -100,6 +100,7 @@
     <script>
         function toggleContent(card) {
             const imageContainer = card.querySelector('.image-container');
+            const image = imageContainer.querySelector('img');
             const name = card.querySelector('.name');
             const role = card.querySelector('.role');
             const separator = card.querySelector('.separator');
@@ -108,6 +109,7 @@
 
             // Toggle visibility
             imageContainer.classList.toggle('hidden');
+            image.classList.toggle('hidden');
             name.classList.toggle('hidden');
             role.classList.toggle('hidden');
             separator.classList.toggle('hidden');

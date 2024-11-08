@@ -24,7 +24,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 15px;
-    background-color: #1a1720;
+    background-color: rgba(26, 23, 32, 0.7); /* Transparent background */
     color: #bbb;
     font-size: 0.9em;
     position: fixed; /* Fixed position at the bottom of the viewport */
@@ -43,8 +43,6 @@ footer {
 .footer-links a:hover {
     color: #ffffff;
 }
-
-
 
 /* Tree background effect */
 .tree {

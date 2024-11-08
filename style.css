@@ -43,7 +43,7 @@ h1 {
 /* Card Styling */
 .card {
     width: 100%;
-    max-width: 200px; /* Set max-width for better scaling */
+    max-width: 280px; /* Set max-width for better scaling */
     height: 320px;
     background-color: rgba(26, 23, 32, 0.7);
     border-radius: 12px;

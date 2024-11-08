@@ -18,61 +18,29 @@ body {
     overflow-x: hidden;
 }
 
-/* Footer Styling */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-    background-color: rgba(26, 23, 32, 0.7); /* Transparent background */
-    color: #bbb;
-    font-size: 0.9em;
-    position: fixed; /* Fixed position at the bottom of the viewport */
-    bottom: 0; /* Aligns to the bottom */
-    left: 0;
-    z-index: 1;
-}
-
-.footer-links a {
-    color: #bbb;
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-/* Tree background effect */
-.tree {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 300px;
-    background-image: url('./images/IMG.png');
-    background-size: cover;
-    opacity: 0.15;
-    z-index: -1;
-}
-
+/* Header Styling */
 h1 {
     color: #eee;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 1.3em;
     margin: 50px 0;
+    position: fixed;
+    top: 20px;
+    z-index: 1;
 }
 
+/* Container Styling */
 .container {
     display: grid;
     grid-template-columns: 1fr; /* Single column for scroll layout */
     gap: 22px;
     width: 100%;
     padding: 20px;
+    margin-top: 80px; /* Adds spacing below the fixed header */
 }
 
+/* Card Styling */
 .card {
     width: 100%;
     max-width: 200px; /* Set max-width for better scaling */
@@ -100,4 +68,151 @@ h1 {
     color: #fff;
 }
 
-/* Rest of the styling remains unchanged */
+/* Profile Image Styling */
+figure {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #009ad9, #ffba00);
+}
+
+figure img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.4s;
+}
+
+.card:hover figure img {
+    filter: grayscale(0%);
+}
+
+/* Card Text Styling */
+.name {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.role {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+/* Separator Styling */
+.separator {
+    margin: 16px;
+    height: 5px;
+    width: 60px;
+    background-color: #2e3033;
+    position: relative;
+    transition: 0.4s;
+}
+
+.card:hover .separator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #009ad9, #ffba00);
+    animation: widthAnimation 0.3s;
+}
+
+@keyframes widthAnimation {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 60px;
+    }
+}
+
+/* Social Container Styling */
+.social-container {
+    display: none;
+}
+
+.card:hover .social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container a button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.social-container a button:hover {
+    background-color: #006699;
+}
+
+.social-container a button i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(26, 23, 32, 0.7);
+    color: #bbb;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Footer Visibility on Scroll */
+footer.visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+footer:not(.visible) {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tree Background Effect */
+.tree {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 300px;
+    background-image: url('./images/IMG.png');
+    background-size: cover;
+    opacity: 0.15;
+    z-index: -1;
+}

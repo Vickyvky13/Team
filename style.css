@@ -60,8 +60,6 @@ h1 {
     justify-content: center;
     align-items: center;
     transition: background-color 0.4s, transform 0.4s;
-    border: 3px solid transparent; /* Define border size */
-    border-image: linear-gradient(45deg, #009ad9, #ffba00) 1; /* Dual color border */
 }
 
 .card:hover {
@@ -135,7 +133,7 @@ figure img {
     transition: background-color 0.3s;
 }
 
-.social-container a button:hover {
+social-container a button:hover {
     background-color: #006699;
 }
 

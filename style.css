@@ -9,7 +9,7 @@
 body {
     width           : 100%;
     min-height      : 100vh;
-    background      : linear-gradient(to right, #EE82EE, #1a1720); /* Violet to dark grey gradient */
+    background      : linear-gradient(#4d3664, #bab5f6);
     display         : flex;
     flex-direction  : column;
     justify-content : center;
@@ -110,7 +110,7 @@ figure img {
 }
 
 .card:hover~.card {
-    left      : 40px;
+    top      : 40px;
     transition: 0.4s;
 }
 

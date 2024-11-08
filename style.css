@@ -119,9 +119,7 @@ figure img {
 }
 
 .card:hover * {
-    background: linear-gradient(135deg, #ff48f0, #1f0fff); /* Gradient colors */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
 .card:hover .separator::after {
@@ -132,7 +130,7 @@ figure img {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #009ad9, #ffba00);
-    animation: widthAnimation 0.4s;
+    animation: widthAnimation 2s;
 }
 
 @keyframes widthAnimation {

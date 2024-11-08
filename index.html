@@ -14,12 +14,6 @@
     <div class="container">
         <!-- Card 1 -->
         <div class="card" onclick="toggleContent(this)">
-            <figure class="image-container">
-                <img src="./images/IMG01.jpg" alt="Profile image">
-            </figure>
-            <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
-            <p class="role">Solo Tree Owner</p>
-            <div class="separator"></div>
             <div class="social-container hidden">
                 <a href="https://t.me/ilakshu" target="_blank">
                     <button>
@@ -28,17 +22,17 @@
                     </button>
                 </a>
             </div>
+            <figure class="image-container">
+                <img src="./images/IMG01.jpg" alt="Profile image">
+            </figure>
+            <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
+            <p class="role">Solo Tree Owner</p>
+            <div class="separator"></div>
             <p class="additional-text hidden">Hello! Welcome to Solo Tree Community.</p>
         </div>
 
         <!-- Card 2 -->
         <div class="card" onclick="toggleContent(this)">
-            <figure class="image-container">
-                <img src="./images/IMG02.jpg" alt="Profile image">
-            </figure>
-            <p class="name">℘αηɉυ ɱιттαι</p>
-            <p class="role">Co - Owner</p>
-            <div class="separator"></div>
             <div class="social-container hidden">
                 <a href="https://t.me/littlevaayadi" target="_blank">
                     <button>
@@ -47,17 +41,17 @@
                     </button>
                 </a>
             </div>
+            <figure class="image-container">
+                <img src="./images/IMG02.jpg" alt="Profile image">
+            </figure>
+            <p class="name">℘αηɉυ ɱιттαι</p>
+            <p class="role">Co - Owner</p>
+            <div class="separator"></div>
             <p class="additional-text hidden">Let's connect and grow together!</p>
         </div>
 
         <!-- Card 3 -->
         <div class="card" onclick="toggleContent(this)">
-            <figure class="image-container">
-                <img src="./images/IMG03.jpg" alt="Profile image">
-            </figure>
-            <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
-            <p class="role">Sponsor</p>
-            <div class="separator"></div>
             <div class="social-container hidden">
                 <a href="https://t.me/Simba_itsme" target="_blank">
                     <button>
@@ -66,17 +60,17 @@
                     </button>
                 </a>
             </div>
+            <figure class="image-container">
+                <img src="./images/IMG03.jpg" alt="Profile image">
+            </figure>
+            <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
+            <p class="role">Sponsor</p>
+            <div class="separator"></div>
             <p class="additional-text hidden">Proud sponsor of Solo Tree Community!</p>
         </div>
 
         <!-- Card 4 -->
         <div class="card" onclick="toggleContent(this)">
-            <figure class="image-container">
-                <img src="./images/IMG04.jpg" alt="Profile image">
-            </figure>
-            <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
-            <p class="role">Backend Dev</p>
-            <div class="separator"></div>
             <div class="social-container hidden">
                 <a href="https://t.me/CosmicSoulRay" target="_blank">
                     <button>
@@ -85,6 +79,12 @@
                     </button>
                 </a>
             </div>
+            <figure class="image-container">
+                <img src="./images/IMG04.jpg" alt="Profile image">
+            </figure>
+            <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
+            <p class="role">Backend Dev</p>
+            <div class="separator"></div>
             <p class="additional-text hidden">Developing the backbone of Solo Tree!</p>
         </div>
     </div>
@@ -96,9 +96,9 @@
             const additionalText = card.querySelector('.additional-text');
             
             // Toggle visibility
-            imageContainer.classList.toggle('hidden');
-            socialContainer.classList.toggle('hidden');
-            additionalText.classList.toggle('hidden');
+            imageContainer.classList.add('hidden');
+            socialContainer.classList.remove('hidden');
+            additionalText.classList.remove('hidden');
         }
     </script>
 </body>

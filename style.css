@@ -40,7 +40,7 @@ h1 {
 /* Class to hide the header */
 h1.hide {
     opacity: 0;
-    pointer-events: none; /* To prevent interaction when hidden */
+    pointer-events: none;
 }
 
 /* Footer Styling */
@@ -88,7 +88,7 @@ footer {
     gap: 22px;
     align-items: center;
     justify-items: center;
-    padding-top: 80px; /* Add padding to make space for the fixed header */
+    padding-top: 80px;
 }
 
 .card {
@@ -172,6 +172,13 @@ figure img {
 /* Social Container Styling */
 .social-container {
     margin-top: 10px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 button {

@@ -19,15 +19,18 @@ body {
     overflow: hidden;
 }
 
-
 /* Footer Styling */
 footer {
-    margin-top: 30px;
+    width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #1a1720;
     color: #bbb;
     font-size: 0.9em;
+    position: fixed; /* Fixed position at the bottom of the viewport */
+    bottom: 0; /* Aligns to the bottom */
+    left: 0;
+    z-index: 1;
 }
 
 .footer-links a {
@@ -40,6 +43,8 @@ footer {
 .footer-links a:hover {
     color: #ffffff;
 }
+
+
 
 /* Tree background effect */
 .tree {

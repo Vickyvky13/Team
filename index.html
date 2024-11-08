@@ -11,10 +11,15 @@
 <body>
     <h1>Solo Tree Community</h1>
 
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+
     <div class="container">
-        <div class="card" onclick="toggleSocial(this)">
+        <div class="card">
             <figure>
-                <img src="./images/IMG01.jpg" alt="Profile image">
+                <img src="./images/IMG01.jpg" alt="Profile image" data-original="./images/IMG01.jpg" data-alt="./images/IMG01-alt.jpg">
             </figure>
             <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
             <p class="role">Solo Tree Owner</p>
@@ -29,9 +34,9 @@
             </div>
         </div>
 
-        <div class="card" onclick="toggleSocial(this)">
+        <div class="card">
             <figure>
-                <img src="./images/IMG02.jpg" alt="Profile image">
+                <img src="./images/IMG02.jpg" alt="Profile image" data-original="./images/IMG02.jpg" data-alt="./images/IMG02-alt.jpg">
             </figure>
             <p class="name">℘αηɉυ ɱιттαι</p>
             <p class="role">Co - Owner</p>
@@ -46,9 +51,9 @@
             </div>
         </div>
 
-        <div class="card" onclick="toggleSocial(this)">
+        <div class="card">
             <figure>
-                <img src="./images/IMG03.jpg" alt="Profile image">
+                <img src="./images/IMG03.jpg" alt="Profile image" data-original="./images/IMG03.jpg" data-alt="./images/IMG03-alt.jpg">
             </figure>
             <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
             <p class="role">Sponsor</p>
@@ -63,9 +68,9 @@
             </div>
         </div>
 
-        <div class="card" onclick="toggleSocial(this)">
+        <div class="card">
             <figure>
-                <img src="./images/IMG04.jpg" alt="Profile image">
+                <img src="./images/IMG04.jpg" alt="Profile image" data-original="./images/IMG04.jpg" data-alt="./images/IMG04-alt.jpg">
             </figure>
             <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
             <p class="role">Backend Dev</p>
@@ -106,10 +111,13 @@
             lastScrollY = window.scrollY;
         });
 
-        // Toggle social links on card click
-        function toggleSocial(card) {
-            card.classList.toggle('show-social');
-        }
+        // Scroll down indicator behavior
+        document.querySelector('.scroll-down').addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>

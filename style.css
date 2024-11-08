@@ -10,27 +10,13 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#4d3664, #bab5f6); /* Smooth gradient for a calming effect */
+    background: linear-gradient(#4d3664, #bab5f6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-}
-
-/* Tree background effect */
-.tree {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 300px;
-    background-image: url('./images/tree.png'); /* Replace with an actual tree silhouette image */
-    background-size: cover;
-    opacity: 0.15; /* Transparent look for subtlety */
-    z-index: -1; /* Keeps it in the background */
 }
 
 h1 {
@@ -52,7 +38,7 @@ h1 {
 .card {
     width: 180px;
     height: 320px;
-    background-color: transparent; /* Set initial background to transparent */
+    background-color: transparent;
     border-radius: 12px;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
     display: flex;
@@ -60,10 +46,11 @@ h1 {
     justify-content: center;
     align-items: center;
     transition: background-color 0.4s, transform 0.4s;
+    cursor: pointer;
 }
 
 .card:hover {
-    background-color: #1a1720; /* Background color appears on hover */
+    background-color: #1a1720;
     transform: translateY(-15px);
 }
 
@@ -71,7 +58,7 @@ h1 {
     color: #fff;
 }
 
-figure {
+figure.image-container {
     position: relative;
     width: 110px;
     height: 110px;
@@ -113,10 +100,14 @@ figure img {
     transition: 0.4s;
 }
 
-.social-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.social-container,
+.additional-text {
+    display: none;
+}
+
+.social-container.hidden,
+.additional-text.hidden {
+    display: none;
 }
 
 .social-container a button {
@@ -133,18 +124,13 @@ figure img {
     transition: background-color 0.3s;
 }
 
-social-container a button:hover {
+.social-container a button:hover {
     background-color: #006699;
 }
 
 .social-container a button i {
     font-size: 16px;
     margin-right: 8px;
-}
-
-.card:hover {
-    transform: translateY(-15px);
-    transition: 0.4s;
 }
 
 .card:hover .separator::after {
@@ -165,4 +151,9 @@ social-container a button:hover {
     to {
         width: 60px;
     }
+}
+
+/* Hidden class to toggle visibility */
+.hidden {
+    display: none;
 }

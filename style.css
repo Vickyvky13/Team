@@ -1,89 +1,150 @@
-/* General Styling */
+/* General Reset and Styling */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  color: #bbb;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #bbb;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #2b2b2b;
-  overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#4d3664, #bab5f6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
-  color: #eee;
-  margin-bottom: 20px;
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.3em;
+    margin-bottom: 50px;
 }
 
-/* Container Styling */
 .container {
-  display: flex;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    align-items: center;
+    justify-items: center;
 }
 
 .card {
-  width: 120px;
-  height: 180px;
-  background-color: #333;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: transform 0.3s;
+    width: 180px;
+    height: 320px;
+    background-color: #1a1720;
+    border-radius: 12px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
 }
 
+figure {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #009ad9, #ffba00);
+}
+
+/* Default grayscale filter */
+figure img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.4s;
+}
+
+/* Remove grayscale on hover (or touch) */
+.card:hover figure img {
+    filter: grayscale(0%);
+}
+
+.name {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.role {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.separator {
+    margin: 16px;
+    height: 5px;
+    width: 60px;
+    background-color: #2e3033;
+    position: relative;
+    transition: 0.4s;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container a button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.social-container a button:hover {
+    background-color: #006699;
+}
+
+.social-container a button i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+/* Card hover effects */
 .card:hover {
-  transform: scale(1.1);
+    transform: translateY(-15px);
+    transition: 0.4s;
 }
 
-/* Background Animation Container */
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
+.card:hover * {
+    color: #fff;
 }
 
-/* Falling Animation for Winter (Snowflakes) */
-.snowflake {
-  position: absolute;
-  top: -50px;
-  color: #fff;
-  font-size: 1.5em;
-  opacity: 0.8;
-  animation: fall 5s linear infinite;
+.card:hover .separator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #009ad9, #ffba00);
+    animation: widthAnimation 2s;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
-/* Falling Animation for Spring (Leaves) */
-.leaf {
-  position: absolute;
-  top: -50px;
-  color: #28a745;
-  font-size: 1.5em;
-  animation: fallLeaf 6s linear infinite;
-}
-
-@keyframes fallLeaf {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-  }
+@keyframes widthAnimation {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 60px;
+    }
 }

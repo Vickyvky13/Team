@@ -166,7 +166,7 @@ figure img {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #009ad9, #ffba00);
-    animation: gradient-animation 2s infinite linear;
+    animation: gradient-animation 0.4s infinite linear;
 }
 
 /* Social Container Styling */

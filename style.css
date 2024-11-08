@@ -18,32 +18,36 @@ body {
     overflow-x: hidden;
 }
 
-/* Header Styling */
+/* Fixed Header Styling */
 h1 {
     color: #eee;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 1.3em;
-    margin: 50px 0;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
     position: fixed;
-    top: 20px;
-    z-index: 1;
+    top: 0;
+    background: rgba(26, 23, 32, 0.8); /* Optional background to enhance visibility */
+    z-index: 2;
 }
 
-/* Container Styling */
+/* Adjusted Container Styling */
 .container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for scroll layout */
+    grid-template-columns: 1fr;
     gap: 22px;
     width: 100%;
     padding: 20px;
-    margin-top: 80px; /* Adds spacing below the fixed header */
+    margin-top: 80px; /* Space below the fixed header */
 }
 
 /* Card Styling */
 .card {
     width: 100%;
-    max-width: 280px; /* Set max-width for better scaling */
+    max-width: 200px;
     height: 320px;
     background-color: rgba(26, 23, 32, 0.7);
     border-radius: 12px;

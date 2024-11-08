@@ -19,6 +19,28 @@ body {
     overflow: hidden;
 }
 
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1720;
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
 /* Tree background effect */
 .tree {
     position: absolute;

@@ -19,59 +19,12 @@ body {
     overflow: hidden;
 }
 
-/* Footer Styling */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(26, 23, 32, 0.8); /* Transparent background */
-    color: #bbb;
-    font-size: 0.9em;
-    position: fixed;
-    bottom: -50px; /* Start hidden at the bottom */
-    left: 0;
-    transition: bottom 0.4s; /* Smooth transition */
-    z-index: 1;
-}
-
-.footer-links a {
-    color: #bbb;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff;
-}
-
-/* Footer visible class */
-footer.visible {
-    bottom: 0; /* Bring footer into view */
-}
-
-
-
-/* Tree background effect */
-.tree {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 300px;
-    background-image: url('./images/IMG.png');
-    background-size: cover;
-    opacity: 0.15;
-    z-index: -1;
-}
-
 h1 {
     color: #eee;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 1.3em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -149,33 +102,7 @@ figure img {
     transition: 0.4s;
 }
 
-.card:hover .separator::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #009ad9, #ffba00);
-    animation: widthAnimation 0.3s;
-}
-
-@keyframes widthAnimation {
-    from {
-        width: 0px;
-    }
-    to {
-        width: 60px;
-    }
-}
-
-/* Hide the social container by default */
 .social-container {
-    display: none;
-}
-
-/* Show the social container only when the card is hovered */
-.card:hover .social-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,4 +129,35 @@ figure img {
 .social-container a button i {
     font-size: 16px;
     margin-right: 8px;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(26, 23, 32, 0.8); /* Transparent background */
+    color: #bbb;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: -50px; /* Start hidden */
+    left: 0;
+    transition: bottom 0.4s ease;
+    z-index: 1;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Visible footer */
+footer.visible {
+    bottom: 0; /* Slide up into view */
 }

@@ -9,13 +9,12 @@
 body {
     width           : 100%;
     min-height      : 100vh;
-    background-color: #EE82EE;
+    background      : linear-gradient(to right, #EE82EE, #1a1720); /* Violet to dark grey gradient */
     display         : flex;
     flex-direction  : column;
     justify-content : center;
     align-items     : center;
 }
-
 h1 {
     color         : #eee;
     text-transform: uppercase;

@@ -119,7 +119,9 @@ figure img {
 }
 
 .card:hover * {
-    color: #fff;
+    background: linear-gradient(135deg, #ff48f0, #1f0fff); /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .card:hover .separator::after {

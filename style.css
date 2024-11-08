@@ -1,3 +1,4 @@
+/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
@@ -60,8 +61,12 @@ figure {
 
 figure img {
     width: 100%;
-    filter: grayscale(100%);
     transition: 0.4s;
+}
+
+/* Add grayscale effect on hover */
+.card:hover figure img {
+    filter: grayscale(100%);
 }
 
 .name {
@@ -116,10 +121,6 @@ figure img {
 .card:hover {
     transform: translateY(-15px);
     transition: 0.4s;
-}
-
-.card:hover figure img {
-    opacity: 0.75;
 }
 
 .card:hover * {

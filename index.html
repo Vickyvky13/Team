@@ -14,7 +14,7 @@
     <div class="container">
         <div class="card">
             <figure>
-                <img src="./images/IMG01.jpg" alt="Profile image" data-original="./images/IMG01.jpg" data-alt="./images/img1.jpg">
+                <img src="./images/IMG01.jpg" alt="Profile image" data-original="./images/IMG01.jpg" data-alt="./images/IMG01-alt.jpg">
             </figure>
             <p class="name">ـﮩﮩ٨ـˢᵐⁱˡᵉʸﮩﮩـ</p>
             <p class="role">Solo Tree Owner</p>
@@ -91,12 +91,16 @@
                     const figure = card.querySelector('figure img');
                     const currentImage = figure.src;
 
+                    // Get the original and alternate image paths from the data attributes
                     const originalImage = figure.getAttribute('data-original');
-                    const newImage = currentImage === originalImage 
-                        ? figure.getAttribute('data-alt') 
-                        : originalImage;
+                    const alternateImage = figure.getAttribute('data-alt');
 
-                    figure.src = newImage;
+                    // Toggle between the original and alternate image
+                    if (currentImage === originalImage) {
+                        figure.src = alternateImage; // Change to alternate image
+                    } else {
+                        figure.src = originalImage; // Revert back to original image
+                    }
                 });
             });
         });

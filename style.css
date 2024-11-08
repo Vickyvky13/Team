@@ -24,12 +24,13 @@ footer {
     width: 100%;
     text-align: center;
     padding: 15px;
-    background-color: #1a1720;
+    background-color: rgba(26, 23, 32, 0.8); /* Transparent background */
     color: #bbb;
     font-size: 0.9em;
-    position: fixed; /* Fixed position at the bottom of the viewport */
-    bottom: 0; /* Aligns to the bottom */
+    position: fixed;
+    bottom: -50px; /* Start hidden at the bottom */
     left: 0;
+    transition: bottom 0.4s; /* Smooth transition */
     z-index: 1;
 }
 
@@ -42,6 +43,11 @@ footer {
 
 .footer-links a:hover {
     color: #ffffff;
+}
+
+/* Footer visible class */
+footer.visible {
+    bottom: 0; /* Bring footer into view */
 }
 
 

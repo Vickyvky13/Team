@@ -194,7 +194,7 @@ footer {
 }
 
 /* Button Styling */
-.toggle-button {
+button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,20 +209,18 @@ footer {
     cursor: pointer;
     margin-top: 5px;
     transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-    opacity: 1;
-    visibility: visible;
 }
 
-.toggle-button:hover {
+button:hover {
     background-color: #ffaa00;
 }
 
-.toggle-button i {
+button i {
     margin-right: 5px;
 }
 
 /* Smooth Hide Button Animation with Vertical Slide-Up */
-.toggle-button.hide {
+button.hide {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-15px); /* Slide the button up */

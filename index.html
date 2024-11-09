@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sᴏʟᴏ Tʀᴇᴇ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Sᴏʟᴏ Tʀᴇᴇ</title>
 </head>
 <body>
     <h1>Solo Tree Community</h1>
@@ -92,6 +92,9 @@
             <a href="https://t.me/solotreee" target="_blank">Channel</a> |
             <a href="https://t.me/SoloTreeBots" target="_blank">SoloTreeBots</a>
         </div>
+        <div class="footer-time">
+            Current Time: <span id="currentTime">--:--:--</span>
+        </div>
     </footer>
 
     <!-- Script for Header Scroll and Social Container Toggle -->
@@ -115,6 +118,20 @@
                 socialContainer.classList.add('hidden');
             }, 3000);
         }
+
+        // Function to update the current time
+        function updateTime() {
+            const timeElement = document.getElementById('currentTime');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Initialize time display
+        updateTime();
+        setInterval(updateTime, 1000);
     </script>
 </body>
 </html>

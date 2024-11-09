@@ -46,7 +46,7 @@ h1.hide {
 footer {
     width: 100%;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     background-color: rgba(26, 23, 32, 0.7);
     color: #bbb;
     font-size: 0.9em;
@@ -78,9 +78,10 @@ footer {
     color: #ffba00; /* Highlight color for time */
 }
 
+/* Responsive Container */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 22px;
     align-items: center;
     justify-items: center;
@@ -276,4 +277,26 @@ button.hide {
 
 .branch .card-container .vertical-line {
     margin-top: -20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8em;
+    }
 }

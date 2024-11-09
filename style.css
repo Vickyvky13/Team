@@ -222,7 +222,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     margin-top: 5px;
-    transition: background-color 0.3s ease, opacity 0.5s ease, visibility 1.5s ease;
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease, visibility 1.5s ease;
 }
 
 button:hover {
@@ -233,9 +233,11 @@ button i {
     margin-right: 5px;
 }
 
-/* Hide Button Smoothly */
+/* Hide Button Smoothly with Slide-out Animation */
 button.hide {
     opacity: 0;
     visibility: hidden;
+    transform: translateX(20px); /* Slide the button out to the right */
     pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
 }

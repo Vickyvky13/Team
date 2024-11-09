@@ -233,11 +233,11 @@ button i {
     margin-right: 5px;
 }
 
-/* Smooth Hide Button Animation */
+/* Smooth Hide Button Animation with Vertical Slide-Up */
 button.hide {
     opacity: 0;
     visibility: hidden;
-    transform: translateX(5px); /* Slide the button out to the right */
+    transform: translateY(-15px); /* Slide the button up */
     pointer-events: none; /* Prevent interaction when hidden */
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 }

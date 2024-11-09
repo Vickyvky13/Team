@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome for Telegram icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Google Font Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="./style.css">
     <title>Sᴏʟᴏ Tʀᴇᴇ</title>
 </head>
 <body>
+    <!-- Header -->
     <h1>Solo Tree Community</h1>
 
+    <!-- Container for profile cards -->
     <div class="container">
         <!-- Card for Solo Tree Owner -->
         <div class="card" onclick="toggleSocial(this)">
@@ -94,7 +99,7 @@
         </div>
     </footer>
 
-    <!-- Add the script at the end of the body -->
+    <!-- Script to handle header scroll and social-container toggle -->
     <script>
         const header = document.querySelector('h1');
         let lastScrollY = window.scrollY;
@@ -108,7 +113,7 @@
             lastScrollY = window.scrollY;
         });
 
-        // Function to toggle the visibility of the social container
+        // Function to toggle visibility of social container
         function toggleSocial(card) {
             const socialContainer = card.querySelector('.social-container');
             socialContainer.classList.toggle('hidden');

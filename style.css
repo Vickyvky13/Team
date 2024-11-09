@@ -210,6 +210,223 @@ button i {
 }
 
 /* Hide Button Smoothly */
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #bbb;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4d3664, #bab5f6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden; /* Allow only vertical scrolling */
+}
+
+/* Fixed Header Styling */
+h1 {
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    background: rgba(26, 23, 32, 0.8);
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Class to hide the header */
+h1.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(26, 23, 32, 0.7);
+    color: #bbb;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Footer Time Styling */
+.footer-time {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+#currentTime {
+    font-weight: bold;
+    color: #ffba00; /* Highlight color for time */
+}
+
+/* Tree background effect */
+.tree {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 300px;
+    background-image: url('./images/IMG.png');
+    background-size: cover;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 80px;
+    padding-bottom: 60px; /* Padding to prevent overlap with footer */
+    width: 100%;
+}
+
+/* Card styling */
+.card {
+    width: 180px;
+    height: 320px;
+    background-color: rgba(26, 23, 32, 0.7);
+    border-radius: 12px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    opacity: 0.7;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    background-color: #1a1720;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.card:hover * {
+    color: #fff;
+}
+
+.card figure {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ffba00;
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.role {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.separator {
+    width: 60%;
+    height: 2px;
+    background: #ffba00;
+    margin: 10px 0;
+}
+
+/* Social Media Buttons */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.social-container.hidden {
+    display: none;
+}
+
+/* Button Styling */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    background-color: #24A1DE;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #1a1720;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease, opacity 0.5s ease, visibility 1.5s ease;
+}
+
+button:hover {
+    background-color: #ffaa00;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+/* Hide Button Smoothly */
 button.hide {
     opacity: 0;
     visibility: hidden;

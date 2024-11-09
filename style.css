@@ -47,6 +47,12 @@ h1.hide {
     width: 100%;
 }
 
+/* First Card Styling (Rectangular) */
+.card:first-child {
+    width: 250px;
+    height: 180px;
+    border-radius: 8px;
+}
 .card {
     width: 180px;
     height: 250px;
@@ -122,7 +128,7 @@ h1.hide {
 /* Tree Lines Styling */
 .vertical-line {
     width: 2px;
-    height: 40px;
+    height: 60px;
     background-color: #333;
     margin: 0 auto;
 }
@@ -133,7 +139,7 @@ h1.hide {
     margin: 0 auto;
 }
 
-/* Branches Container */
+/* Branches and Positioning */
 .branches {
     display: flex;
     justify-content: space-around;
@@ -144,6 +150,15 @@ h1.hide {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.branch:nth-child(2) .horizontal-line {
+    margin-right: auto;
+}
+.branch:nth-child(3) .horizontal-line {
+    margin-left: auto;
+}
+.branch:nth-child(4) .horizontal-line {
+    margin-right: auto;
 }
 .card-container {
     display: flex;

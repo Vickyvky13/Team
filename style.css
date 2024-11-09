@@ -119,10 +119,9 @@ footer {
     opacity: 0.7;
 }
 
-/* Card hover effect */
 .card:hover {
-    background-color: #ffaa00; /* Change color to #ffaa00 on hover */
     transform: translateY(-15px);
+    background-color: #1a1720;
     opacity: 1;
     transition: 0.4s;
 }
@@ -131,18 +130,13 @@ footer {
     color: #fff;
 }
 
-/* Additional card hover effects for content */
-.card:hover .separator {
-    background-color: #ffffff; /* Optional: change separator color */
-}
-
 .card figure {
     width: 100px;
     height: 100px;
     margin: 0;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid #ffaa00;
+    border: 2px solid #ffba00;
     transition: 0.4s;
 }
 

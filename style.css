@@ -108,7 +108,7 @@ footer {
 .card {
     width: 180px;
     height: 320px;
-    background-color: transparent; /* Make initial background transparent */
+    background-color: rgba(26, 23, 32, 0.7);
     border-radius: 12px;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.6);
     display: flex;
@@ -121,7 +121,7 @@ footer {
 
 .card:hover {
     transform: translateY(-15px);
-    background-color: #1a1720; /* Background color appears on hover */
+    background-color: #1a1720;
     opacity: 1;
     transition: 0.4s;
 }
@@ -136,7 +136,7 @@ footer {
     margin: 0;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid #1D9FF2;
+    border: 2px solid #ffba00;
     transition: 0.4s;
 }
 
@@ -202,7 +202,7 @@ button {
 }
 
 button:hover {
-    background-color: #1D9FF2;
+    background-color: #ffaa00;
 }
 
 button i {

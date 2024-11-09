@@ -119,14 +119,14 @@ footer {
     opacity: 0.7;
 }
 
-.card:hover {
+.card:active, .card:hover {
     transform: translateY(-15px);
-    background-color: #1a1720;
+    background-color: #ffaa00; /* Change color on touch or hover */
     opacity: 1;
     transition: 0.4s;
 }
 
-.card:hover * {
+.card:active *, .card:hover * {
     color: #fff;
 }
 
@@ -147,7 +147,7 @@ footer {
     transition: transform 0.4s;
 }
 
-.card:hover img {
+.card:hover img, .card:active img {
     transform: scale(1.1);
 }
 

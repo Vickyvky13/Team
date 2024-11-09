@@ -1,4 +1,4 @@
-/* General Reset and Styling */
+l/* General Reset and Styling */
 * {
     margin: 0;
     padding: 0;
@@ -67,6 +67,18 @@ footer {
     color: #ffffff;
 }
 
+/* Footer Time Styling */
+.footer-time {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+#currentTime {
+    font-weight: bold;
+    color: #ffba00; /* Highlight color for time */
+}
+
 /* Tree background effect */
 .tree {
     position: absolute;
@@ -118,101 +130,80 @@ footer {
     color: #fff;
 }
 
-figure {
-    position: relative;
-    width: 110px;
-    height: 110px;
+.card figure {
+    width: 100px;
+    height: 100px;
+    margin: 0;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #009ad9, #ffba00);
+    border: 2px solid #ffba00;
+    transition: 0.4s;
 }
 
-figure img {
+.card img {
     width: 100%;
-    filter: grayscale(100%);
-    transition: filter 0.4s;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
 }
 
-.card:hover figure img {
-    filter: grayscale(0%);
+.card:hover img {
+    transform: scale(1.1);
 }
 
 .name {
     font-size: 1.1em;
-    margin-bottom: 8px;
+    font-weight: bold;
+    margin: 10px 0 5px;
 }
 
 .role {
-    text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    color: #888;
 }
 
 .separator {
-    margin: 16px;
-    height: 5px;
-    width: 60px;
-    background-color: #2e3033;
-    position: relative;
-    transition: 0.4s;
+    width: 60%;
+    height: 2px;
+    background: #ffba00;
+    margin: 10px 0;
 }
 
-.card:hover .separator::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #009ad9, #ffba00);
-    animation: gradient-animation 0.4s infinite linear;
-}
-
-/* Social Container Styling */
+/* Social Media Buttons */
 .social-container {
-    margin-top: 10px;
-    opacity: 1;
-    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    transition: opacity 0.3s ease;
 }
 
-.hidden {
-    opacity: 0;
-    pointer-events: none;
+.social-container.hidden {
+    display: none;
 }
 
-/* Button Styling */
 button {
-    background-color: #0088cc; /* Blue background for Telegram button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    background-color: #ffba00;
     border: none;
-    color: #fff;
-    font-size: 1em;
-    padding: 8px 16px;
     border-radius: 6px;
+    font-size: 0.9em;
+    color: #1a1720;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0077b3; /* Darker blue on hover */
+    background-color: #ffaa00;
 }
 
 button i {
-    margin-right: 8px;
-}
-
-button span {
-    vertical-align: middle;
-}
-
-/* Animation for Separator Gradient */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: 100%;
-    }
+    margin-right: 5px;
 }

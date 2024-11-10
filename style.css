@@ -46,7 +46,7 @@ h1.hide {
 h2 {
     color: #ffba00;
     text-transform: uppercase;
-    font-size: 3.8em; /* Larger font size for H1-like style */
+    font-size: 3.4em; /* Larger font size for H1-like style */
     font-weight: bold; /* H1-style bold text */
     letter-spacing: 3px;
     margin: 40px 0 20px;

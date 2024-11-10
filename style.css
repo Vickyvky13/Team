@@ -42,7 +42,6 @@ h1.hide {
     pointer-events: none;
 }
 
-/* Title Styling with H1 Style and Animation */
 h2 {
     color: #ffba00;
     text-transform: uppercase;
@@ -50,7 +49,7 @@ h2 {
     font-weight: bold; /* H1-style bold text */
     letter-spacing: 3px;
     margin: 40px 0 20px;
-    animation: titleFadeIn 1.5s ease-out, textGlow 1.5s ease-in-out infinite alternate;
+    animation: titleFadeIn 1.5s ease-out; /* Removed textGlow animation */
 }
 
 /* Title Fade-in Animation */
@@ -65,15 +64,6 @@ h2 {
     }
 }
 
-/* Glowing Effect Animation */
-@keyframes textGlow {
-    from {
-        text-shadow: 0 0 10px #ffba00, 0 0 20px #ffba00, 0 0 30px #ffba00;
-    }
-    to {
-        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffba00, 0 0 40px #ffba00;
-    }
-}
 
 
 /* Footer Styling */

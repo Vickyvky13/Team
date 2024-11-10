@@ -36,6 +36,12 @@ h1 {
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Class to hide the header */
+h1.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Title Styling with Animation */
 h2 {
     color: #ffba00;
@@ -93,6 +99,7 @@ footer {
     color: #ffffff;
 }
 
+/* Footer Time Styling */
 .footer-time {
     margin-top: 5px;
     font-size: 0.9em;

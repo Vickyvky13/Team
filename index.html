@@ -163,7 +163,6 @@
         </div>
     </footer>
 
- 
     <!-- Script for Header Scroll and Social Container Toggle -->
     <script>
         const header = document.querySelector('h1');
@@ -181,24 +180,13 @@
         function toggleSocial(card) {
             const socialContainer = card.querySelector('.social-container');
             socialContainer.classList.toggle('hidden');
-            setTimeout(() => {
-                socialContainer.classList.add('hidden');
-            }, 3000);
         }
 
-        // Function to update the current time
-        function updateTime() {
-            const timeElement = document.getElementById('currentTime');
+        // Update time every second
+        setInterval(() => {
             const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
-        }
-
-        // Initialize time display
-        updateTime();
-        setInterval(updateTime, 1000);
+            document.getElementById("currentTime").textContent = now.toLocaleTimeString();
+        }, 1000);
     </script>
 </body>
 </html>

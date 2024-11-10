@@ -1,17 +1,11 @@
-function toggleSocial(card) {
-    // First, hide all other social containers
-    document.querySelectorAll('.social-container').forEach(container => {
-        if (container !== card.querySelector('.social-container')) {
-            container.classList.add('hidden');
-        }
-    });
+// Function to toggle button visibility
+function toggleButton(card) {
+    // Find any previously active card and remove the "show" class from its button
+    document.querySelectorAll('.card button.show').forEach(button => button.classList.remove('show'));
 
-    // Then toggle the clicked card's social container
-    const socialContainer = card.querySelector('.social-container');
-    socialContainer.classList.toggle('hidden');
-
-    // Automatically hide the social container after 3 seconds
-    setTimeout(() => {
-        socialContainer.classList.add('hidden');
-    }, 3000);
+    // Show the button on the clicked card
+    const button = card.querySelector('button');
+    if (button) {
+        button.classList.add('show');
+    }
 }

@@ -217,9 +217,12 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-/* Hide the button initially */
-button {
+.social-container.hidden {
     display: none;
+}
+
+button {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -235,14 +238,18 @@ button {
     transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 }
 
-button.show {
-    display: flex;
-}
-
 button:hover {
     background-color: #ffaa00;
 }
 
 button i {
     margin-right: 5px;
+}
+
+button.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 }

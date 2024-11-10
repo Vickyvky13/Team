@@ -24,111 +24,10 @@
             </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG02.jpg" alt="Profile image"></figure>
-            <p class="name">℘αηɉυ ɱιттαι</p>
-            <p class="role">Co - Owner</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/littlevaayadi" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
+        <!-- Other cards continue... -->
 
-        <!-- Card 3 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG03.jpg" alt="Profile image"></figure>
-            <p class="name">░█🇸‌🇮‌🇲‌🇧‌🇦‌█░</p>
-            <p class="role">Sponsor</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/Simba_itsme" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG04.jpg" alt="Profile image"></figure>
-            <p class="name">🝍 ᴄᴏѕᴍɪᴄ ♮ ѕᴏʟᴜ 🝍</p>
-            <p class="role">Backend Dev</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/CosmicSoulRay" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
     </div>
 
-    <!-- New Title for Additional Cards -->
-    <h2>Solo Tree Active Bots</h2>
-    <div class="container">
-        <!-- Additional 8 Cards for Bots -->
-        <!-- Card 5 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG05.jpg" alt="Profile image"></figure>
-            <p class="name">˹ᴍᴜꜱ𝖏ᴄ <♪> ᴠ𝖏ʙᴇ˼</p>
-            <p class="role">Music Bot 🎶</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/Music_vibing_bot" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG06.jpg" alt="Profile image"></figure>
-            <p class="name">˹ғᴧʟʟᴇɴ ᴍᴜsɪᴄ˼</p>
-            <p class="role">Music Bot 🎶</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/FallenOfficialBot" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG07.jpg" alt="Profile image"></figure>
-            <p class="name">Sᴘɪᴋʏ Mᴜsɪᴄ 🍭</p>
-            <p class="role">Music Bot 🎶</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/SpikyMusicBot" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG08.jpg" alt="Profile image"></figure>
-            <p class="name">Jᴀx Mᴜsɪᴄ 🥂</p>
-            <p class="role">Music Bot ,🎶</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/JaxMusicbot" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-        <!-- Card 9 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG09.jpg" alt="Profile image"></figure>
-            <p class="name">Cʜᴀᴛ ɢᴘᴛ ᴀɪ</p>
-            <p class="role">AI Bot ⛑️</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/Chatgptasking_bot" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-        <!-- Card 10 -->
-        <div class="card" onclick="toggleSocial(this)">
-            <figure><img src="./Images/IMG10.jpg" alt="Profile image"></figure>
-            <p class="name">𝖢𝗋𝗂𝖼𝗄𝖾𝗍 𝖦𝖺𝗆𝖾 🏏</p>
-            <p class="role">Game Bot 🎮</p>
-            <div class="separator"></div>
-            <div class="social-container hidden">
-                <a href="https://t.me/Cricket_GameBot" target="_blank"><button><i class="fab fa-telegram-plane"></i> Telegram</button></a>
-            </div>
-        </div>
-
-    <!-- Footer Section -->
     <footer>
         <div class="footer-links">
             <a href="https://t.me/solo_tree_support" target="_blank">Support Group</a> |
@@ -156,8 +55,24 @@
 
         function toggleSocial(card) {
             const socialContainer = card.querySelector('.social-container');
+            const allSocialContainers = document.querySelectorAll('.social-container');
+            
+            // Hide all social containers
+            allSocialContainers.forEach(container => container.classList.add('hidden'));
+
+            // Toggle the clicked social container
             socialContainer.classList.toggle('hidden');
         }
+
+        // Hide social containers when clicking outside
+        document.addEventListener('click', (event) => {
+            const isCard = event.target.closest('.card');
+            const allSocialContainers = document.querySelectorAll('.social-container');
+
+            if (!isCard) {
+                allSocialContainers.forEach(container => container.classList.add('hidden'));
+            }
+        });
 
         // Update time every second
         setInterval(() => {

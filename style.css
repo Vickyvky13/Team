@@ -42,7 +42,7 @@ h1.hide {
     pointer-events: none;
 }
 
-/* Fixed Header Styling */
+/* Title Styling with H1 Style and Background */
 h2 {
     color: #eee;
     text-transform: uppercase;
@@ -54,7 +54,7 @@ h2 {
     text-align: center;
     position: fixed;
     top: 0;
-    background: rgba(26, 23, 32, 0.8);
+    background: rgba(26, 23, 32, 0.8); /* Semi-transparent background */
     z-index: 2;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;

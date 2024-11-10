@@ -49,6 +49,9 @@ h2 {
     font-weight: bold; /* H1-style bold text */
     letter-spacing: 3px;
     margin: 40px 0 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px 20px; /* Add some padding for better readability */
+    border-radius: 5px; /* Optional: rounded corners */
     animation: titleFadeIn 1.5s ease-out; /* Removed textGlow animation */
 }
 
@@ -63,6 +66,7 @@ h2 {
         transform: translateY(0);
     }
 }
+
 
 
 

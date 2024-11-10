@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow-x: hidden; /* Allow only vertical scrolling */
+    overflow-x: hidden;
 }
 
 /* Fixed Header Styling */
@@ -40,6 +40,38 @@ h1 {
 h1.hide {
     opacity: 0;
     pointer-events: none;
+}
+
+/* Title Styling with Animation */
+h2 {
+    color: #ffba00;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    margin: 40px 0 20px;
+    animation: titleFadeIn 1s ease-in-out, textGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Title Fade-in Animation */
+@keyframes titleFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing Effect Animation */
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px #ffba00, 0 0 20px #ffba00, 0 0 30px #ffba00;
+    }
+    to {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffba00, 0 0 40px #ffba00;
+    }
 }
 
 /* Footer Styling */
@@ -76,9 +108,10 @@ footer {
 
 #currentTime {
     font-weight: bold;
-    color: #ffba00; /* Highlight color for time */
+    color: #ffba00;
 }
 
+/* Container for Cards */
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,7 +119,7 @@ footer {
     align-items: center;
     justify-items: center;
     padding-top: 80px;
-    padding-bottom: 60px; /* Padding to prevent overlap with footer */
+    padding-bottom: 60px;
     width: 100%;
 }
 
@@ -158,7 +191,6 @@ footer {
     overflow: hidden;
 }
 
-/* Animated Gradient Separator on Hover */
 .card:hover .separator::after {
     content: "";
     position: absolute;
@@ -193,7 +225,6 @@ footer {
     display: none;
 }
 
-/* Button Styling */
 button {
     display: flex;
     align-items: center;
@@ -219,11 +250,10 @@ button i {
     margin-right: 5px;
 }
 
-/* Smooth Hide Button Animation with Vertical Slide-Up */
 button.hide {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-15px); /* Slide the button up */
-    pointer-events: none; /* Prevent interaction when hidden */
+    transform: translateY(-15px);
+    pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 }

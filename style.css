@@ -36,12 +36,6 @@ h1 {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Class to hide the header */
-h1.hide {
-    opacity: 0;
-    pointer-events: none;
-}
-
 /* Title Styling with Animation */
 h2 {
     color: #ffba00;
@@ -99,7 +93,6 @@ footer {
     color: #ffffff;
 }
 
-/* Footer Time Styling */
 .footer-time {
     margin-top: 5px;
     font-size: 0.9em;
@@ -123,7 +116,7 @@ footer {
     width: 100%;
 }
 
-/* Card styling */
+/* Card styling with animated gradient border */
 .card {
     width: 180px;
     height: 320px;
@@ -137,6 +130,42 @@ footer {
     transition: 0.4s;
     opacity: 0.7;
     position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,
+.card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 12px;
+    animation: spin 3s linear infinite;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
 
 .card:hover {

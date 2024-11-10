@@ -45,30 +45,27 @@ h1.hide {
 h2 {
     color: #eee;
     text-transform: uppercase;
-    font-size: 1.4em; /* Larger font size for H1-like style */
-    font-weight: bold; /* H1-style bold text */
+    font-size: 1.4em;
+    font-weight: bold;
     letter-spacing: 3px;
     margin: 40px 0 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 10px 20px; /* Add some padding for better readability */
-    border-radius: 5px; /* Optional: rounded corners */
-    animation: titleFadeIn 1.5s ease-out; /* Removed textGlow animation */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: titleFadeIn 1.5s ease-out;
 }
 
 /* Title Fade-in Animation */
 @keyframes titleFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(30px); /* Increased distance for more noticeable effect */
+        transform: translateY(30px);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-
-
 
 /* Footer Styling */
 footer {
@@ -95,7 +92,6 @@ footer {
     color: #ffffff;
 }
 
-/* Footer Time Styling */
 .footer-time {
     margin-top: 5px;
     font-size: 0.9em;
@@ -209,7 +205,7 @@ footer {
 
 /* Social Media Buttons */
 .social-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -217,9 +213,11 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-/* Hide the button initially */
+.social-container.show {
+    display: flex;
+}
+
 button {
-    display: none;
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -232,11 +230,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     margin-top: 5px;
-    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-}
-
-button.show {
-    display: flex;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
